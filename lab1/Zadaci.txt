@@ -1,0 +1,45 @@
+Zadatak 1
+Napišite funkciju (odd_or_even) koja od korisnika traži da unese ceo broj,
+a zatim proverava i ispisuje da li je broj paran ili neparan.
+
+Zadatak 2
+Napišite funkciju (factorial) koja izračunava i ispisuje faktorijel broja.
+Funkcija prima broj (pozitivan ceo broj) kao svoj jedini ulazni argument.
+
+Zadatak 3
+Napišite funkciju (nth_lowest) koja prima 2 ulazna argumenta:
+1) items - koji predstavlja sekvencu elemenata (tj iterable)
+2) n - pozitivan ceo broj
+Funkcija vraća najmanju n-tu vrednost u okviru items sekvence.
+Ako n nije pozitivan broj ili je veći od broja elemenata u items sekvenci,
+funkcija vraća najmanju vrednost sekvence.
+
+Zadatak 4
+Napišite funkciju (list_stats) koja prima listu brojeva (numbers) i
+vraća uređenu n-torku sa sledećim elementima:
+- najmanji element liste po apsolutnoj vrednosti
+- najveći element liste po apsolutnoj vrijednosti
+- zbir svih nenegativnih elemenata u listi
+- proizvod svih negativnih elemenata u listi
+
+Zadatak 5
+Napišite funkciju (list_operations) koja prima dva ulazna argumenta:
+listu brojeva (numbers) i jedan celi broj (threshold). Funkcija bi trebalo da:
+- kreira novu listu sa jedinstvenim elementima iz ulazne liste (numbers) koji su ispod praga (threshold)
+- ispisuje broj elemenata u novoj listi
+- sortira elemente u novoj listi u opdajućem redosledu i ispisuje ih, po jedan element u redu
+
+Zadatak 6
+Napišite funkciju (guessing_game) za igranje igre pogađanja broja između 1 i 9.
+Preciznije, funkcija bi trebalo da emulira sledeći scenario:
+Korisniku se najpre prikaže par osnovnih informacija o igri.
+Zatim se korisniku daje mogućnost da pogodi broj koji je funkcija "zamislila".
+Ako korisnik ne pogodi, daje mu se mogućnost ponovnog pogađanja.
+Korisnik može pokušati da pogodi maksimalno 3 puta.
+U slučaju uspešnog pogađanja, trebalo i ispisati poruku "Tacno - broj je <broj>! Bravo!" i funkcija se završava.
+Ako prilikom pogađanja korisnik unese broj koji je izvan granica (manji od 1 ili veći od 9) ili znak koji nije broj,
+trebalo bi prikazati poruku da su dopušteni samo jednocifreni brojevi. Ovakvu grešku ne računati kao neuspešno pogađanje.
+
+Saveti:
+- možete koristiti funkciju 'randint' iz paketa 'random' za generiranje broja koji se pogađa u igri
+- string funkcija 'isdigit' može se koristiti za proveru je li je uneta vrednost broj

@@ -1,0 +1,84 @@
+Zadatak 1
+
+Napišite funkciju (concat_index_wise) koja prima dve liste stringova
+jednake dužine i vraća novu listu dobijenu spajanjem ulaznih lista po indeksima,
+odnosno povezujući elemente koji se nalaze na istim pozicijama u listi.
+
+Primer:
+Ulazne liste:
+list1 = ["M", "na", "i", "Ke"]
+list2 = ["y", "me", "s", "lly"]
+Izlaz:
+['My', 'name', 'is', 'Kelly']
+
+
+Zadatak 2
+
+Napišite funkciju (digits_in_string) koja prima jedan string kao svoj ulazni
+argument i vraća listu cifara koje se pojavljuju u tom stringu. Ako string
+ne sadrži cifre, funkcija vraća praznu listu.
+
+
+Zadatak 3
+
+Napišite funkciju (palindrom) koja prima string i proverava da li je string palindrom.
+Funkcija vraća odgovarajuću logičku vrednost.
+
+Napomena: palindrom je reč, fraza ili sekvenca koja se čita isto i s leva
+na desno i s desna na levo. Npr. "potop" ili "Sir ima miris"
+
+Dodatna uputstva:
+- Poređenje slova treba da bude neosetljivo na velika i mala slova
+(case insensitive).
+- Razmake i znake interpunkcije, ako su prisutni, treba zanemariti.
+
+
+Zadatak 4
+
+Napišite funkciju (password_check) koja prihvata string koji sadrzi lozinke
+za proveru odvojene zarezom. Funkcija proverava njihovu validnost koristeći
+sledeće kriterijume:
+1. Najmanje 1 slovo između [a-z] tj. najmanje 1 malo slovo
+2. Najmanje 1 broj između [0-9] tj. najmanje 1 cifra
+3. Najmanje 1 slovo između [A-Z] tj. najmanje 1 veliko slovo
+4. Najmanje 1 od sledećih znakova: $,#,@
+5. Dužina u opsegu 6-12 (uključujući 6 i 12)
+Lozinke koje odgovaraju kriterijumima treba da budu prikazane u jednom redu
+odvojene zarezom.
+
+
+Zadatak 5
+
+Napišite funkciju (server_status) koja prima izveštaj (kao string) o stanju nekoliko
+servera. Svaki red izveštaja se odnosi na jedan server i ima sledeći format:
+"Server <server_name> is <up/down>"
+
+Obratite pažnju da neki redovi mogu biti prazni. Takođe, neki serveri mogu biti
+pomenuti više puta, u kom slučaju, najnoviji status (poslednji ispisan) bi trebalo
+smatrati važećim.
+
+Funkcija treba da obradi izveštaj i ispiše:
+- ukupan broj servera pomenutih u izveštaju
+- procenat servera koji ne rade
+- imena servera koji ne rade (ako ih ima)
+
+
+Zadatak 6
+
+Napišite funkciju (anagram) koja prima dva stringa i proverava da li su anagrami.
+Funkcija vraća odgovarajuću logičku vrednost.
+
+Napomena: Anagram je reč ili fraza nastala preuređivanjem slova druge
+reči ili fraze.
+
+Dodatna uputstva:
+- Poređenje slova treba da bude neosetljivo na velika i mala slova.
+- Razmake i znake interpunkcije, ako postoje, treba zanemariti.
+
+
+Zadatak 7
+
+Napišite funkciju (all_even_digits) koja pronalazi cele brojeve između 100 i 400
+(uključujući i ove brojeve) gde je svaka cifra broja parna. Brojeve koji odgovaraju
+ovom kriterijumu treba prikazati kao string u kome su brojevi odvojeni zarezom.
+
