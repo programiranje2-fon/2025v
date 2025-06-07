@@ -1,0 +1,101 @@
+# ZADATAK 1:
+
+Napisati funkciju (create_print_numeric_dict) koja prima celobrojnu vrednost (n) i generiše rečnik
+sa parovima u obliku x:S(x), gde je x broj između 1 i n, a S(x) = 1 + 2 + ... + x.
+Funkcija takođe ispisuje rečnik u opadajućem redosledu ključeva, na sledeći način (za n=5):
+
+5: 1+2+3+4+5=15
+4: 1+2+3+4=10
+3: 1+2+3=6
+2: 1+2=3
+1: 1=1
+
+
+# ZADATAK 2:
+
+Napisati funkciju (lists_to_dict) koja kreira rečnik iz dve date liste, tako što elementi prve liste
+postaju ključevi, dok odgovarajući elementi druge liste postaju vrednosti.
+Ispisati rečnik sortiran na osnovu vrednosti elemenata. 
+(savet: koristiti funkciju itemgetter() iz modula operator)
+
+Primer: lista zemalja i lista nacionalnih jela tih zemalja treba da se pretvori u rečnik gde su ključevi
+imena zemalja, a vrednosti odgovarajuća jela.
+
+
+# ZADATAK 3:
+
+Napisati funkciju (string_stats) koja prima string kao ulazni parametar i računa broj cifara, slova i
+znakova interpunkcije (.,!?;:) u datom stringu. Funkcija vraća rečnik sa izračunatim vrednostima.
+
+
+# ZADATAK 4:
+
+Napisati funkciju (password_check) koja prima sekvencu lozinki odvojenih zarezima i proverava
+njihovu validnost koristeći sledeće kriterijume:
+
+1. Najmanje 1 slovo između [a-z] => Najmanje 1 malo slovo
+2. Najmanje 1 broj između [0-9] => Najmanje 1 cifra
+3. Najmanje 1 slovo između [A-Z] => Najmanje 1 veliko slovo
+4. Najmanje 1 od ovih znakova: $,#,@
+5. Dužina u rasponu 6-12 (uključujući 6 i 12)
+
+Funkcija kreira i vraća rečnik sa proverenim lozinkama kao ključevima, gde vrednost ključa
+treba da bude lista sa:
+- jednim elementom "valid", ako se odgovarajuća lozinka pokazala validnom
+- identifikovanim problemima, ako lozinka nije validna
+
+
+# ZADATAK 5:
+
+Napisati funkciju (team_stats) koja kao ulaz prima listu rečnika sa podacima o članovima sportskog tima.
+Svaki rečnik sadrži sledeće podatke o jednom članu tima: ime, godine i takmičarski rezultat (0-100). 
+Na primer: {ime:Bob, godine:19, rezultat:55.5} 
+Funkcija računa i ispisuje sledeće statistike:
+
+- prosečne (srednje) godine članova tima
+- ime igrača sa najnižim rezultatom među onima mlađim od 21 godine 
+- ime igrača sa najvišim rezultatom među onima mlađim od 21 godine
+
+Na kraju, funkcija ispisuje listu članova sortiranu po rezultatima članova (od najvišeg do najnižeg).
+Savet: modul 'statistics' pruža funkcije za potrebne statistike.
+
+
+# ZADATAK 6:
+
+Napisati funkciju (token_frequency) koja prima segment teksta i računa frekvenciju tokena u tekstu
+(podrazumeva se da je token niz uzastopnih karaktera između dva razmaka).
+Izračunati frekvenciju tokena na način neosetljiv na velika i mala slova (case insensitive).
+Tokeni i njihove frekvencije treba sačuvati u rečniku (tokeni kao ključevi, frekvencije kao vrednosti).
+Funkcija ispisuje rezultujući rečnik nakon što sortira tokene alfabetski.
+
+Nakon testiranja funkcije, izmeniti je tako da:
+
+- tokeni budu očišćeni od bilo kakvih suvišnih karaktera (npr. razmaci ili interpunkcijski znaci)
+pre dodavanja u rečnik
+- samo tokeni sa najmanje 3 karaktera su dodati u rečnik
+- pre ispisa, unosi u rečnik su sortirani: prvo u opadajućem redosledu frekvencije tokena, a zatim u
+rastućem abecednom redosledu
+
+
+# ZADATAK 7:
+
+Napisati funkciju (classroom_stats) za brojanje ukupnog broja učenika po razredu. Funkcija prima listu
+tuple-ova oblika (<razred>,<broj_učenika>). Na primer:
+[('V', 1), ('VI', 1), ('V', 2), ('VI', 2), ('VI', 3), ('VII', 1)]
+Funkcija kreira rečnik razreda i njihovih brojeva učenika; zatim ispisuje razrede i njihove veličine
+(tj ukupan broj ucenika) u opadajućem redosledu veličine razreda.
+
+Nakon testiranja funkcije, pokušati napisati je koristeći klasu Counter iz modula collections.
+
+
+# ZADATAK 8:
+
+Napisati funkciju (website_stats) koja prima listu web adresa (URL-ova) različitih organizacija.
+Odrediti broj adresa za svaki sufiks (npr., com, org, net) prisutan u listi. Kreirati i vratiti rečnik
+sa izračunatim vrednostima (ključevi su sufiksi web adresa, vrednosti su odgovarajući brojevi).
+
+
+
+
+
+ 
