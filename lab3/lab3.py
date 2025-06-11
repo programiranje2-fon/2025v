@@ -1,18 +1,21 @@
 """
 Vezbe, dvocas 3
 """
-from collections import defaultdict
+
 
 #%%
 # Zadatak 1
 
 
 
+
 #%%
-#create_print_numeric_dict(7)
+# create_print_numeric_dict(7)
 
 #%%
 # Zadatak 2
+
+
 
 
 #%%
@@ -24,12 +27,16 @@ from collections import defaultdict
 # Zadatak 3
 
 
+
+
 #%%
 # print("string_stats('Today is October 22, 2024!'):")
 # print(string_stats("Today is October 22, 2024!"))
 
+
 #%%
 # Zadatak 4
+
 
 
 
@@ -45,6 +52,7 @@ from collections import defaultdict
 
 
 
+
 #%%
 # team = [{'name': 'Bob', 'age': 18, 'score': 50.0},
 #         {'name': 'Tim', 'age': 17, 'score': 84.0},
@@ -54,8 +62,7 @@ from collections import defaultdict
 
 #%%
 # Zadatak 6
-# Napomena: za vise informacija o specificnostima sortiranja, pogledati:
-# https://docs.python.org/3/howto/sorting.html#sort-stability-and-complex-sorts
+
 
 
 
@@ -69,11 +76,10 @@ from collections import defaultdict
 # """)
 # token_frequency(gpt3_response)
 
-# short_text = "Here, here, we are now here"
-# token_frequency(short_text)
-
 #%%
 # Zadatak 7
+
+
 
 
 #%%
@@ -82,7 +88,6 @@ from collections import defaultdict
 
 #%%
 # Zadatak 8
-
 
 
 
