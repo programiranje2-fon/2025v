@@ -1,0 +1,109 @@
+ZADATAK 1
+
+Napišite funkciju 'compute_product' koja prima proizvoljan broj numeričkih vrednosti i izračunava njihov proizvod.
+Funkcija takođe prima imenovani argument "squared" sa podrazumevanom vrednošću False, koji
+određuje da li treba koristiti date numeričke vrednosti kakve jesu ili njihove kvadrate. Izračunati proizvod je povratna vrednost funkcije.
+
+Implementirajte funkciju na dva različita načina:
+
+1) koristeći for petlju
+2) koristeći funkciju reduce() iz modula functools zajedno sa odgovarajućom lambda funkcijom.
+
+Za primer i objašnjenje funkcije reduce() pogledajte, na primer, ove članke:
+https://realpython.com/python-reduce-function/
+https://www.python-course.eu/python3_lambda.php
+
+Napomena: reduce je jedna od tri funkcije koje se često koriste zajedno u analizi podataka: map, filter, reduce
+Za zabavnu ilustraciju, pogledajte ovu stranicu:
+https://www.globalnerdy.com/2016/06/23/map-filter-and-reduce-explained-using-emoji/
+
+
+ZADATAK 2
+
+Napišite funkciju 'select_strings' koja prima proizvoljan broj stringova i vraća listu
+stringova koji imaju isto prvo i poslednje slovo (nezavisno od veličine slova) i ukupan broj
+jedinstvenih karaktera je veći od datog praga. Prag je imenovani argument funkcije
+sa podrazumevanom vrednošću 3.
+
+Implementirajte funkciju na tri različita načina:
+
+1) koristeći for petlju
+2) koristeći list comprehension
+3) koristeći funkciju filter() zajedno sa odgovarajućom lambda funkcijom.
+
+
+
+ZADATAK 3
+
+Napišite funkciju 'process_product_orders' koja prima listu porudžbina proizvoda,
+gde je svaka porudžbina 4-tuple oblika (order_id, product_name, quantity, price_per_item).
+Funkcija vraća rečnik sa elementima oblika <order_id: total_price>,
+gde je ukupna cena za porudžbinu proizvod količine i cene po stavci.
+Funkcija takođe prima dva imenovana argumenta koja mogu uticati na izračunatu ukupnu cenu:
+
+- popust - popust, izražen u procentima, koji se primenjuje na ukupnu cenu;
+podrazumevana vrednost ovog argumenta je None
+- troškovi dostave - troškovi dostave koji se dodaju na porudžbine sa ukupnom cenom manjom od 100;
+podrazumevana vrednost ovog argumenta je 10.
+
+Implementirajte funkciju na tri različita načina:
+
+1) koristeći for petlju
+2) koristeći dictionary comprehension
+3) koristeći funkciju map() zajedno sa odgovarajućom pomoćnom funkcijom
+
+
+ZADATAK 4
+
+Kreirajte dekorater ('timer') koji meri vreme koje funkcija potroši da se izvrši i
+ispisuje ime funkcije i njeno trajanje na konzoli.
+
+Savet 1: koristite šablon za pisanje dekoratera:
+import functools
+def decorator(func):
+      @functools.wraps(func) # čuva identitet funkcije nakon što je dekorisana
+      def wrapper_decorator(*args, **kwargs):
+        # Nešto uradite pre
+
+        vrednost = func(*args, **kwargs)
+        # Nešto uradite posle
+
+        return vrednost
+      return wrapper_decorator
+
+Savet 2: za merenje vremena izvršenja funkcije, koristite funkciju perf_counter()
+iz modula time (vraća float vrednost koja predstavlja vreme u sekundama).
+
+
+ZADATAK 4.1
+
+Napišite funkciju 'compute_sum' koja za svaki broj x u opsegu 1..n (n je ulazni parametar)
+izračunava sumu: S(x) = 1 + 2 + ... + x-1 + x, i vraća sumu svih S(x).
+Dekorisati funkciju timer dekoraterom, da biste izmerili njeno vreme izvršenja.
+
+Napišite funkciju na nekoliko različitih načina - (1) koristeći petlju; (2) koristeći list comprehension;
+(3) koristeći kombinaciju funkcija map i reduce - i označite svaku od njih timer dekoraterom
+da biste uporedili njihove performanse
+
+
+ZADATAK 5
+
+Kreirajte dekorater ('standardiser') koji prvo proverava da li su pozicioni argumenti funkcije brojevi,
+i ako jesu, standardizuje ih (= z-transformacija) pre nego što ih prosledi dekorisanoj funkciji za
+dalje izračunavanje. Ako nisu svi pozicioni argumenti brojevi, dekorater to prijavljuje i prosleđuje
+argumente dekorisanoj funkciji nepromenjene. 
+Dekorator takođe zaokružuje rezultat izračunavanja na 4 decimale pre nego što ga vrati (kao svoju povratnu vrednost).
+
+Bonus: pre poziva dekorisane funkcije, ispišite na konzoli njeno ime sa listom ulaznih
+parametara
+
+
+ZADATAK 5.1
+
+Napišite funkciju 'sum_of_sums' koja prima proizvoljan broj celobrojnih vrednosti i
+za svaku vrednost (x) izračunava sledeću sumu:
+S(x) = 1 + x + x**2 + x**3 + ... + x**n
+gde je n imenovani argument sa podrazumevanom vrednošću 10.
+Funkcija vraća sumu S(x) svih primljenih celobrojnih vrednosti.
+Dekorisite funkciju standardise dekoraterom.
+
