@@ -2,7 +2,8 @@ ZADATAK 1
 
 Napišite funkciju 'compute_product' koja prima proizvoljan broj numeričkih vrednosti i izračunava njihov proizvod.
 Funkcija takođe prima imenovani argument "squared" sa podrazumevanom vrednošću False, koji
-određuje da li treba koristiti date numeričke vrednosti kakve jesu ili njihove kvadrate. Izračunati proizvod je povratna vrednost funkcije.
+određuje da li treba koristiti date numeričke vrednosti kakve jesu ili njihove kvadrate.
+Izračunati proizvod je povratna vrednost funkcije.
 
 Implementirajte funkciju na dva različita načina:
 
