@@ -1,0 +1,54 @@
+Kreirajte klasu `Putnik` sa sledećim metodama:
+
+* Konstruktor (__init__) koji prima četiri argumenta za inicijalizaciju sledeća 4 atributa:
+    * `ime` - ime i prezime putnika
+    * `drzava` - zemlja porekla putnika
+    * `pasos` - broj pasoša putnika
+    * `COVID_bezbedan` - boolean atribut koji ima vrednost True ako je putnik vakcinisan
+      ili je nedavno testiran negativno; podrazumevana vrednost ulaznog argumenta je False
+
+* Get i set metode za atribut `pasos` (koristeći odgovarajuće dekoratore); obezbediti da atribut
+  bude privatni i da bude string dužine 6, koji se sastoji samo od cifara.
+
+* Metoda koja vraća string reprezentaciju objekta klase `Putnik` (__str__)
+
+* Metoda `azuriraj_COVID_bezbedan` koja postavlja vrednost atributa `COVID_bezbedan` na osnovu ulaznih parametara:
+  * `tip_uverenja`: string koji treba da bude ili 'vakcinacija' ili 'negativan_test' (malo/veliko slovo nije bitno)
+  * `datum_uverenja`: datum vakcinacije / PCR testa, kao vrednost tipa datetime; ako je ulazni argument dat kao string,
+  očekuje se da bude u sledećem formatu: %d/%m/%Y
+  Metoda postavlja `COVID_bezbedan` atribut na True ako je:
+  * (poslednja) vakcinacija bila u poslednjih 365 dana ILI
+  * negativan test bio pre manje od 3 dana
+  Napomena: za formate datuma pogledajte tabelu: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+
+* Class metoda za kreiranje putnika na osnovu stringa oblika: "ime_prezime; zemlja_porekla; broj_pasosa; covid_status"
+(alternativni konstruktor)
+
+* Metoda koja proverava jednakost datog objekta klase `Putnik` i drugog objekta koji se prosleđuje metodi kao
+ulazni parametar (__eq__); dva putnika se smatraju jednakim ako su iz iste zemlje i imaju isti broj pasoša.
+
+
+Kreirajte klasu `Let` sa sledećim elementima:
+
+* class atribut `poletanje_dt_format` koji predstavlja očekivani format za datum i vreme poletanja;
+  vrednost atributa je "%Y-%m-%d %H:%M"
+
+* Konstruktor (__init__) koji prima dva parametra i koristi ih za inicijalizaciju atributa:
+  `broj_leta` i `vreme_poletanja`; takođe inicijalizuje atribut `putnici` kao listu objekata klase `Putnik`
+  (inicijalno prazna)
+
+* Get i set metode za atribut `vreme_poletanja` (koristeći odgovarajuće dekoratore);
+  obezbediti da atribut bude privatni i da bude objekat datetime klase koji se odnosi na neki budući
+  vremenski trenutak; ako je ulazni argument tipa string, on mora biti u formatu `poletanje_dt_format`
+
+* Metoda za dodavanje putnika u listu `putnici`; metoda dodaje novog putnika samo ako je
+  ulazni argument objekat klase `Putnik`, ako taj putnik nije već u listi putnika i ako je COVID bezbedan.
+  Ako neki od uslova nije ispunjen i nije izvršeno dodavanje putnika, potrebno je ispisati razlog,
+  odnosno koji od uslova nije bio zadovoljen.
+
+* Metoda koja vraća string reprezentaciju objekata date klase tj klase `Let` (__str__)
+
+* Metoda koja vraća preostalo vreme do poletanja kao triplet oblika (dani, sati, minuti)
+
+* Metode za pretvaranje datog objekta klase `Let` u iterator (__iter__, __next__) kroz putnike na letu
+  (tj. elemente liste `putnici`)
