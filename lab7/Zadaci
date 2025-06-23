@@ -1,0 +1,39 @@
+Dopunite klasu Let (sa vežbi 5) na način opisan u nastavku:
+
+Izmeniti sledeće metode klase Let:
+
+- konstruktor (__init__) bi trebalo da primi tri ulazna argumenta za atribute `broj_leta`, `vreme_poletanja` i `ruta`,
+  gde je `ruta` novi atribut koji predstavlja rutu leta kao uređeni par oblika (polazište, odredište);
+  za atribut `putnici` ostaje da se inicijalizuje kao prazna lista.
+
+- “set” metoda za atribut `vreme_poletanja`, bi trebalo da pravilno obrađuje situacije kada su datum i vreme polaska
+  dati kao string u nepoznatom formatu (tj., u formatu koji ne odgovara class atributu `poletanje_dt_format`)
+
+– “get” metodu atributa `vreme_poletanja` bi trebalo napisati u Pythonic stilu, poznatom kao “lakše je tražiti
+  oproštaj nego dozvolu“ (easier to ask for forgiveness than permission - EAFP)
+
+- metodu koja vraća string reprezentaciju datog objekta (__str__) bi trebalo proširiti tako da opisuje let
+  sa proširenim skupom atributa.
+
+Dodati klasi Let sledeće nove metode:
+
+- “get” i “set” metode (koristeći odgovarajuće dekoratore) za atribut `ruta`. Set metoda bi trebalo da omogući različite
+  načine postavljanja rute leta, odnosno trebalo bi omogućiti postavljanje vrednosti atributa za ulazni argument dat u
+  formi liste ili tapla (od dva elementa) ili stringa sa polaznom i odredišnom lokacijom odvojenim zarezom
+  (“Beograd, Rim”), crticom (“Beograd - Rim”) ili znakom '>' (“Beograd > Rim”).
+  Savet: metoda `split` iz modula `re` može biti korisna za ovaj zahtev.
+
+- class metoda `from_dict` za kreiranje objekta klase Let (alternativni konstruktor) na osnovu podataka o letu koji
+  su dati kao rečnik (jedini ulazni argument) sa sledećim ključevima: `br_leta`, `vreme_poletanja`, `polazna_lokacija`,
+  `odrediste`.
+  Potrebno je uzeti u obzir da rečnik možda ne sadrži sve očekivane podatke, odnosno da se neki ključevi rečnika možda
+  neće podudarati sa prethodno navedenim nazivima; u tom slučaju, metoda ispisuje ključeve koji su dostupni i kreira
+  instancu Let klase sa dostupnim podacima.
+
+- generatorska metoda koja generiše sekvencu putnika koji su naručili dodatne usluge na letu. Metoda takođe ispisuje,
+  za svaku naručenu uslugu, koliko putnika je naručilo tu uslugu.
+
+- generatorska metoda koja generiše sekvencu putnika koji su kandidati za prelazak u biznis klasu; to su putnici
+  ekonomske klase čija cena avionske karte prelazi zadati prag (ulazni argument) i koji su se prijavili za najmanje
+  jednu uslugu na letu. Pri generisanju sekvence kandidata (putnika) trebalo bi uzeti u obzir cenu avionske karte,
+  tako da oni putnici koji su platili višu cenu imaju prioritet za prelazak u biznis klasu.
