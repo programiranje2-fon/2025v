@@ -1,0 +1,52 @@
+Zadatak 1
+
+U folderu sa podacima nalazi se tekstualni fajl 'image_files_for_training.txt' koji sadrži
+putanje do fajlova sa slikama (po jedna putanja u svakom redu). Smatrati da nazivi foldera u kojima se
+fajlovi sa slikama nalaze ukazuju na entitet prikazan na slici; na primer:
+- na slici sa putanjom “/a/abbey/sun_aqswjsnjlrfzzhiz.jpg” pripakazan je “abbey”
+- na slici sa putanjom “/a/airport_terminal/sun_aieubuwceahatwug.jpg” prikazan je “airport_terminal”
+- na slici sa putanjom "/e/escalator/indoor/sun_bofcgdhgrnqqivoc.jpg" prikazan je “escalator_indoor”
+Napišite funkciju koja učitava sadržaj ovog fajla i radi sledeće:
+- određuje i upisuje u txt fajl ('zadatak1_stats.txt') broj slika za svaki entitet, u formatu:
+  entitet: broj_slika
+- kreira i serijalizuje u .pkl fajl ('zadatak1_dict.pkl') rečnik u kome svaki ključ odgovara jednom entitetu,
+  dok je vrednost pridružena ključu lista naziva fajlova koji se odnose na taj entitet.
+
+Napomena za sve zadatke:
+Potrebno je koristiti odgovarajuće try-except blokove kako biste sprečili 'pucanje' programa u slučaju da
+zadati fajlovi ne postoje ili se pojavi bilo koji drugi problem tokom učitavanja / upisivanja podataka u fajl.
+
+
+Zadatak 2
+
+Napišite funkciju koja od korisnika očekuje da unese ime, godine starosti i broj poena ostvarenih na
+takmičenju (0-100) za članove sportskog tima. Svi podaci koji se odnose na jednog člana bi trebalo uneti
+u jednom redu, odvojene zarezom, na primer:
+Marko, 19, 55.5
+Unos se zaustavlja kada korisnik unese 'kraj' (malim ili velikim slovima).
+Funkcija čuva podatke za svakog člana tima kao rečnik sledećeg oblika:
+{ime: Marko, starost: 19, poeni: 55.5}
+gde je ime string, starost je ceo broj, dok su poeni zapisani kao realni broj.
+Podaci za sve članove tima treba da čine listu rečnika.
+Funkcija sortira ovu listu prema ostvarenim poenima članova tima (od najvišeg do najnižeg broja poena) i
+zatim upisuje podatke iz liste u csv fajl.
+Napomena: csv.DictWriter omogucuje jednostavno upisivanje rečnika u csv fajl.
+
+
+Zadatak 3
+
+Napišite funkciju koja prima putanje do dva tekstualna fajla sa celim brojevima, po jedan broj u svakom redu.
+Funkcija učitava brojeve iz ova dva fajla, identifikuje brojeve prisutne u oba fajla i te brojeve upisuje u
+novu listu. Na kraju, funkcija kreira rečnik oblika datog u nastavku i serijalizuje ga u pickle fajl
+('zadatak3_rezultati.pkl'):
+{
+  naziv_prvog_fajla: lista_brojeva_prvog_fajla,
+  naziv_drugog_fajla: lista_brojeva_drugog_fajla,
+  "zajednicki_brojevi": lista_identifikovanih_zajedničkih_brojeva
+}
+Napomene:
+- Za testiranje funkcije koristiti fajlove 'happy_numbers.txt' i 'prime_numbers.txt' iz foldera sa podacima.
+- Može se desiti da neki redovi u ulaznim fajlovima ne sadrže brojeve, i takve vrednosti ne bi
+  trebalo razmatrati.
+- Ako se podaci iz nekog od fajlova ne mogu učitati, potrebno je baciti izuzetak sa odgovarajućom porukom.
+
